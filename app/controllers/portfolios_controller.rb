@@ -46,4 +46,12 @@ class PortfoliosController < ApplicationController
             format.html { redirect_to portfolios_path, notice: 'Portfolio was deleted'}
         end
     end
+
+    def react
+        @react_items = Portfolio.react
+    end
+
+    def ror
+        @ror_items = Portfolio.ror
+    end
 end
