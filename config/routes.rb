@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   resources :portfolios, except: [:show]
+  get 'react-items', to: 'portfolios#react'
   get 'portfolio/:id',to: 'portfolios#show',as: 'portfolio_show'
   resources :blogs do
       member do
