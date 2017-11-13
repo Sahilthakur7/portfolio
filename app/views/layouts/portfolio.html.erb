@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -5,7 +7,7 @@
         <meta name="keywords" content="<%=@seo_keywords%>" />
         <%= csrf_meta_tags %>
 
-        <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+        <%= stylesheet_link_tag    'portfolios', media: 'all', 'data-turbolinks-track': 'reload' %>
         <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     </head>
 
@@ -13,20 +15,21 @@
         <p class="notice"><%= notice%></p>
         <p class="alert"><%= alert%></p>
 
-        <%= render 'shared/navbar', location: 'top'%>
-
         <% if current_user.is_a?(User)%>
             <%=link_to "Logout", destroy_user_session_path,method: :delete%>
         <%else%>
             <%=link_to "Login", new_user_session_path%>
 
         <%end%>
+
         <%= yield %>
-        <p>
+
+        <%= render 'shared/navbar' ,location: 'top'%>
+
         <% if session[:source]%>
-           Thank you for visiting from <%= session[:source]%>
-        <%else%>
-        <%end%>
+            Thank you for visiting from <%= session[:source]%>
+    <%else%>
+    <%end%>
         </p>
     </body>
 </html>
