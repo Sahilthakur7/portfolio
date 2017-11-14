@@ -14,21 +14,14 @@
         <p class="notice"><%= notice%></p>
         <p class="alert"><%= alert%></p>
 
-        <% if current_user.is_a?(User)%>
-            <%=link_to "Logout", destroy_user_session_path,method: :delete%>
-        <%else%>
-            <%=link_to "Login", new_user_session_path%>
 
-        <%end%>
+        <%= login_helper %>
 
         <%= yield %>
 
         <%= render 'shared/navbar' ,location: 'top'%>
 
-        <% if session[:source]%>
-            Thank you for visiting from <%= session[:source]%>
-    <%else%>
-    <%end%>
+        <%= source_tracker%>
         </p>
     </body>
 </html>
