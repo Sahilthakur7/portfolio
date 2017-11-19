@@ -17,4 +17,9 @@ module ApplicationHelper
         end
 
     end
+
+    def copyright_generator
+        SahilViewTool::Renderer.copyright("Sahil Thakur", "All rights reserved")
+    end
+
 end
