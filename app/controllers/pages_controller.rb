@@ -8,5 +8,7 @@ class PagesController < ApplicationController
   end
 
   def contact
+      @page_title += 'Contact'
+      @facebook = "facebook.com/sahilreddevil4ever"
   end
 end
