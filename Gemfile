@@ -35,6 +35,7 @@ gem 'bootstrap', '~> 4.0.0.beta2.1'
 gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.2'
 gem 'sahil_view_tool', git: 'https://github.com/Sahilthakur7/sahil_view_tool'
 gem 'petergate', '~> 1.8'
+gem 'kaminari', '~> 1.1', '>= 1.1.1'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
