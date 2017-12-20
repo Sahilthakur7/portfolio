@@ -1,4 +1,6 @@
 class PortfoliosController < ApplicationController
+    protect_from_forgery with: :null_session
+    skip_before_action :verify_authenticity_token, :only => [:logout]
     before_action :set_portfolio_item,only: [ :show,:destroy,:edit,:update]
     access all: [:show,:index,:ror,:react], user: {except: [:destroy,:new,:create,:update,:edit]}, site_admin: :all
     layout "portfolio"
@@ -9,7 +11,7 @@ class PortfoliosController < ApplicationController
 
     def sort
         params[:order].each do |key,value|
-            Porfolio.find(value[:id]).update(position: value[:position])
+            Portfolio.find(value[:id]).update(position: value[:position])
         end
 
         render nothing: true
