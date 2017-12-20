@@ -2,7 +2,7 @@ class PortfoliosController < ApplicationController
     protect_from_forgery with: :null_session
     skip_before_action :verify_authenticity_token, :only => [:logout]
     before_action :set_portfolio_item,only: [ :show,:destroy,:edit,:update]
-    access all: [:show,:index,:ror,:react], user: {except: [:destroy,:new,:create,:update,:edit]}, site_admin: :all
+    access all: [:show,:index,:ror,:react], user: {except: [:destroy,:new,:create,:update,:edit,:sort]}, site_admin: :all
     layout "portfolio"
     def index
         @page_title +=  " Portfolios"
