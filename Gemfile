@@ -40,6 +40,7 @@ gem 'kaminari', '~> 1.1', '>= 1.1.1'
 gem 'carrierwave', '~> 1.2', '>= 1.2.1'
 gem 'carrierwave-aws', '~> 1.3'
 gem 'mini_magick', '~> 4.8'
+gem 'dotenv-rails'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
