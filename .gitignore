@@ -21,4 +21,5 @@
 # i dont want my secrets
 
 /config/secrets.yml
+/config/database.yml
 /.env

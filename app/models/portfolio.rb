@@ -1,13 +1,11 @@
 class Portfolio < ApplicationRecord
-    includes Placeholder
 
     mount_uploader :thumb_image, PortfolioUploader
     mount_uploader :main_image, PortfolioUploader
     has_many :technologies
     accepts_nested_attributes_for :technologies, reject_if: lambda { |attrs| attrs['name'].blank?}
 
-    validates_presence_of :title, :main_image
-    after_initialize :set_defaults
+    validates_presence_of :title 
 
     def self.react
         where(subtitle: 'ReactJS')
@@ -17,10 +15,6 @@ class Portfolio < ApplicationRecord
         where(subtitle: 'Ruby on Rails')
     end
 
-    def set_defaults
-        self.main_image ||= Placeholder.image_generator(height: '600',width: '400')
-        self.thumb_image ||= Placeholder.image_generator(height: '300',width: '200')
-    end
 
     def self.by_position
         order("position ASC")
