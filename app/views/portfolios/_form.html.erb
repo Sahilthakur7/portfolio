@@ -35,12 +35,12 @@
 
     <ul>
         <%= f.fields_for :technologies do |ff| %>
-            <li>
-                <%= ff.label :name%> 
-                <%= ff.text_field :name,class: "form-control"%> 
-            </li>
+            <%= render 'technology_fields',f: ff%>
         <%end%>
     </ul>
+    <div>
+        <%= link_to_add_association 'Add Technology' , f , :technologies%>
+    </div>
 
     <div class="actions">
         <%=f.submit "Submit", class: "btn btn-primary btn-block"%>

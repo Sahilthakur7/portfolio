@@ -41,6 +41,7 @@ gem 'carrierwave', '~> 1.2', '>= 1.2.1'
 gem 'carrierwave-aws', '~> 1.3'
 gem 'mini_magick', '~> 4.8'
 gem 'dotenv-rails'
+gem 'cocoon', '~> 1.2', '>= 1.2.11'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
