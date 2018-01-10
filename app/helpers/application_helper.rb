@@ -63,4 +63,12 @@ module ApplicationHelper
 
     end
 
+    def alerts
+        alert = (flash[:alert] || flash[:error] || flash[:notice])
+        
+        if alert
+            js add_gritter(alert, title: "Sahil Thakur Portfolio",sticky: false)
+        end
+    end
+
 end
