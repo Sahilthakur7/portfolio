@@ -43,6 +43,7 @@ gem 'mini_magick', '~> 4.8'
 gem 'dotenv-rails'
 gem 'cocoon', '~> 1.2', '>= 1.2.11'
 gem 'gritter', '~> 1.2'
+gem 'twitter', '~> 6.2'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
