@@ -44,6 +44,7 @@ gem 'dotenv-rails'
 gem 'cocoon', '~> 1.2', '>= 1.2.11'
 gem 'gritter', '~> 1.2'
 gem 'twitter', '~> 6.2'
+gem 'redis', '~> 4.0', '>= 4.0.1'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
