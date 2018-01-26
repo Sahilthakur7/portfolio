@@ -7,6 +7,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <%= csrf_meta_tags %>
 
+        <%= favicon_link_tag 'favicons/favicon.ico'%>
+
 
         <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
         <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
@@ -33,7 +35,6 @@
                     <%= render 'shared/footer'%>
                     <%= alerts %>
 
-                    <%= source_tracker%>
 
 
                 </div>

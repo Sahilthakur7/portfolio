@@ -11,8 +11,8 @@ module ApplicationHelper
 
     def source_tracker
         if session[:source]
-            greeting="Thank you for visiting from  #{session[:source]}"
-            content_tag(:p,greeting ,class: "source-greeting")
+            greeting="Thank you for visiting from  #{session[:source]}, please feel free to #{ link_to 'contact me', contact_path} if you'd like to work together"
+            content_tag(:div,greeting.html_safe ,class: "alert alert-info")
         end
 
     end
