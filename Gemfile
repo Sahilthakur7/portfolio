@@ -68,4 +68,6 @@ end
 
 gem 'jquery-ui-rails', '~> 6.0', '>= 6.0.1'
 
+ruby "2.3.1"
+
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
